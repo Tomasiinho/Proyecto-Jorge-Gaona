@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 
     // Insertar datos
-    $query = $conexion->prepare("INSERT INTO usuarios(facultad, nombre, profesor) VALUES (?, ?, ?)");
+    $query = $conexion->prepare("INSERT INTO formulario(facultad, nombre, profesor) VALUES (?, ?, ?)");
     if (!$query) {
         die("Error al preparar la consulta: " . $conexion->error);
     }
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             }
 
             ?>
-            <form action="registro.php" method="post" enctype="multipart/form-data">
+            <form action="formulario.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="facultad" class="form-label">Facultad</label>
                     <input type="text" class="form-control" id="facultad" name="facultad" placeholder="Ingrese el nombre de la facultad" required>
@@ -78,6 +78,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
                 <div class="mb-3">
                     <label for="profesor" class="form-label">Profesor</label>
                     <input type="profesor" class="form-control" id="profesor" name="profesor" placeholder="Ingrese el nombre del profesor" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-primary">Enviar datos...</button>
                 </div>
             </form>
             <br>
