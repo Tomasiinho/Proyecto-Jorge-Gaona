@@ -47,13 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 <html lang="es">
 
 <head>
-    <title>Registro</title>
+    <title>UPLA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-        .texto {
-            color: Blue;
-        }
-    </style>
 </head>
 
 <body>
@@ -61,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         <div class="card text-center p-2 mx-auto my-5" style="max-width: 400px;">
 
-            <h1>Formulario</h1>
+            <h1>Formulario UPLA</h1>
             <?php
             if (isset($error)) {
                 echo "<div class='alert alert-danger'>" . $error . "</div>";
@@ -74,11 +69,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
             <form action="registro.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="facultad" class="form-label">Facultad</label>
-                    <input type="text" class="form-control" id="facultad" name="facultad" placeholder="Ingrese la facultad" required>
+                    <input type="text" class="form-control" id="facultad" name="facultad" placeholder="Ingrese el nombre de la facultad" required>
                 </div>
                 <div class="mb-3">
                     <label for="nombre" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese ssu nombre compelto" required>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese su nombre compelto" required>
                 </div>
                 <div class="mb-3">
                     <label for="profesor" class="form-label">Profesor</label>
